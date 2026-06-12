@@ -1,5 +1,4 @@
 import { useUnlock } from '../context/UnlockContext'
-import styles from './StoryToTicTacToeTransition.module.css'
 
 export default function StoryToTicTacToeTransition() {
   const { phase } = useUnlock()
