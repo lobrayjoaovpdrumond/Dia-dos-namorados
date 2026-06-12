@@ -1,0 +1,157 @@
+.section {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+  overflow: hidden;
+}
+
+.timeline {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--green-light), var(--gold), var(--green));
+  border-radius: 2px;
+}
+
+.item {
+  position: relative;
+  padding-bottom: 2.5rem;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+.marker {
+  position: absolute;
+  left: -2rem;
+  top: 0.5rem;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--cream-dark);
+  box-shadow: 0 0 0 2px var(--gold-light);
+}
+
+.card {
+  width: 100%;
+  text-align: left;
+  background: var(--warm-white);
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(232, 184, 74, 0.15);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-card);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.date {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 0.5rem;
+}
+
+.itemTitle {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .marker {
+    left: -1.5rem;
+  }
+}
+
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  transition: gap var(--transition);
+}
+
+.card:hover .readMore {
+  gap: 0.7rem;
+}
+
+
+.nextChallenge {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.challengeText {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.challengeBtn {
+  padding: 1rem 2.5rem;
+  background: var(--gold);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-soft);
+}
+
+.challengeBtn:hover {
+  background: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+}

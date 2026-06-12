@@ -1,0 +1,279 @@
+.card {
+  background: linear-gradient(135deg, #fffef9 0%, #fff9e6 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(232, 184, 74, 0.15);
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.6s ease both;
+  position: relative;
+  border: 1px solid rgba(232, 184, 74, 0.2);
+}
+
+.card::before {
+  content: '🌻';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 4rem;
+  opacity: 0.1;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card.unlocked {
+  border: 2px solid rgba(232, 184, 74, 0.4);
+  background: linear-gradient(135deg, #fffbf0 0%, #fff5d6 100%);
+  box-shadow: 
+    0 8px 32px rgba(232, 184, 74, 0.2),
+    0 0 0 1px rgba(232, 184, 74, 0.1) inset;
+}
+
+.card.unlocked::before {
+  opacity: 0.15;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(15deg);
+  }
+  to {
+    transform: rotate(375deg);
+  }
+}
+
+.card.locked {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(135deg, #fafaf8 0%, #f0f0ea 100%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.card.locked::before {
+  content: '🌾';
+  opacity: 0.08;
+}
+
+.cardButton {
+  width: 100%;
+  text-align: left;
+  padding: 2.5rem;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.cardButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transition: width 0.4s ease;
+}
+
+.cardButton:hover {
+  transform: translateY(-8px);
+}
+
+.cardButton:hover::after {
+  width: 80%;
+}
+
+.cardButton:hover .openBtn {
+  gap: 1rem;
+}
+
+.lockedContent {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  opacity: 0.65;
+}
+
+.lockIcon {
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #f5d78e 0%, #e8b84a 100%);
+  color: #5a4a2a;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 
+    0 4px 12px rgba(232, 184, 74, 0.3),
+    0 0 0 3px rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+.number::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(232, 184, 74, 0.2), transparent);
+  z-index: -1;
+}
+
+.locked .number {
+  background: linear-gradient(135deg, #d4d4d0 0%, #b8b8b0 100%);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.title {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  line-height: 1.3;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.teaser {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-style: italic;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.teaser::before {
+  content: '✿';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  opacity: 0.6;
+}
+
+.openBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  padding: 0.5rem 0;
+}
+
+.unlockDate {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 1.25rem 0;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+.unlockDate strong {
+  display: block;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.75rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 250, 235, 0.6));
+  border-radius: 12px;
+  border: 1px solid rgba(232, 184, 74, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.countdownItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.countdownValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--gold-dark);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.countdownLabel {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .card {
+    border-radius: 16px;
+  }
+
+  .cardButton,
+  .lockedContent {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .countdown {
+    gap: 0.75rem;
+  }
+
+  .countdownValue {
+    font-size: 1.6rem;
+  }
+
+  .countdownLabel {
+    font-size: 0.7rem;
+  }
+
+  .number {
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+  }
+}
+

@@ -1,0 +1,150 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #fff5e0 0%, #f5d78e 100%);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(232, 184, 74, 0.15);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow), var(--shadow-card);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.thumbnail {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gold .thumbnail {
+  background: linear-gradient(135deg, #fff5e0 0%, #f5d78e 100%);
+}
+
+.rose .thumbnail {
+  background: linear-gradient(135deg, #fff0f0 0%, #e8a0a0 100%);
+}
+
+.green .thumbnail {
+  background: linear-gradient(135deg, #f0f5f0 0%, #8bb89a 100%);
+}
+
+.floral {
+  width: 120px;
+  height: 120px;
+  opacity: 0.7;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.card:hover .floral {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.playIcon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 252, 247, 0.92);
+  color: var(--rose-deep);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), background var(--transition);
+}
+
+.playIcon svg {
+  width: 36px;
+  height: 36px;
+  margin-left: 3px;
+}
+
+.card:hover .playIcon {
+  transform: scale(1.15);
+  background: var(--warm-white);
+}
+
+.body {
+  display: none;
+}
+
+.title {
+  display: none;
+}
+
+.description {
+  display: none;
+}
+
+.watchBtn {
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+    aspect-ratio: 16 / 9;
+  }
+  
+  .floral {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .playIcon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .playIcon svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 95%;
+  }
+  
+  .floral {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .playIcon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .playIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+
+.introImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,116 @@
+.decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sunGlow {
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(232, 184, 74, 0.35) 0%,
+    rgba(245, 215, 142, 0.15) 40%,
+    transparent 70%
+  );
+  animation: pulse 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.sunflowerLeft {
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  width: 140px;
+  opacity: 0.7;
+}
+
+.sunflowerRight {
+  position: absolute;
+  bottom: 40px;
+  right: -5px;
+  width: 110px;
+  opacity: 0.55;
+}
+
+.roseTop {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  width: 70px;
+  opacity: 0.6;
+}
+
+.roseBottom {
+  position: absolute;
+  bottom: 20%;
+  left: 6%;
+  width: 55px;
+  opacity: 0.5;
+}
+
+.feelings .sunflowerLeft {
+  bottom: 10%;
+  left: 2%;
+  opacity: 0.4;
+}
+
+.feelings .roseTop {
+  top: 8%;
+  right: 4%;
+}
+
+.story .roseBottom {
+  bottom: 5%;
+  left: 3%;
+  opacity: 0.45;
+}
+
+.future .sunflowerRight {
+  bottom: 10%;
+  right: 3%;
+  opacity: 0.45;
+}
+
+.future .roseTop {
+  top: 10%;
+  left: 5%;
+  right: auto;
+}
+
+@media (max-width: 768px) {
+  .sunflowerLeft,
+  .sunflowerRight {
+    width: 80px;
+    opacity: 0.35;
+  }
+
+  .roseTop,
+  .roseBottom {
+    width: 45px;
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sunGlow {
+    animation: none;
+  }
+}

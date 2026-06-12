@@ -1,0 +1,14 @@
+.section {
+  position: relative;
+  padding: 6rem 0;
+  background: var(--warm-white);
+  overflow: hidden;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
