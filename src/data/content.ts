@@ -196,11 +196,11 @@ export const futureChapters: FutureChapter[] = [
     id: '2',
     month: 7,
     year: 2026,
-    title: 'Segundo Capítulo',
-    teaser: 'Mais um mês, mais perto de você...',
+    title: 'A Primeira Aliança',
+    teaser: '17/10/2022 - O dia que mudou tudo',
     pages: [
       {
-        content: 'Já se passou um mês desde que começamos esta jornada. A cada dia que passa, meu coração fica mais ansioso para o dia em que acordarei ao seu lado todos os dias.',
+        content: 'Em breve...',
         imageSrc: '/images/future/chapter-2.png',
       },
     ],
