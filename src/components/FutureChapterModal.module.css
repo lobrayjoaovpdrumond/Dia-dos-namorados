@@ -88,36 +88,6 @@
 
 .content {
   padding: 2rem 2.5rem 2.5rem;
-  position: relative;
-}
-
-.scrollIndicator {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  font-size: 1.5rem;
-  animation: bounce 2s infinite;
-  pointer-events: none;
-  opacity: 0.7;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
 }
 
 .number {
@@ -161,10 +131,6 @@
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid rgba(232, 184, 74, 0.2);
-  position: sticky;
-  bottom: 0;
-  background: var(--warm-white);
-  padding-bottom: 0.5rem;
 }
 
 .navBtn {
@@ -178,7 +144,6 @@
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: transform var(--transition), box-shadow var(--transition);
-  box-shadow: 0 2px 8px rgba(232, 184, 74, 0.3);
 }
 
 .navBtn:hover {
