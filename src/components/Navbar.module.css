@@ -36,6 +36,29 @@
   font-size: 1.1rem;
 }
 
+.unlockAllBtn {
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, var(--gold), var(--rose));
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+  z-index: 101;
+}
+
+.unlockAllBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(232, 184, 74, 0.4);
+}
+
+.unlockAllBtn:active {
+  transform: translateY(0);
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -149,6 +172,11 @@
 @media (max-width: 768px) {
   .menuBtn {
     display: flex;
+  }
+
+  .unlockAllBtn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .links {

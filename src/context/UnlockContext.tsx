@@ -33,6 +33,7 @@ interface UnlockContextValue {
   completeMemoryGame: () => void
   startTicTacToe: () => void
   unlockFuture: () => void
+  unlockAll: () => void
   isScrollLocked: boolean
 }
 
@@ -69,12 +70,13 @@ export function UnlockProvider({ children }: { children: ReactNode }) {
   const completeMemoryGame = useCallback(() => setPhase('story_unlocked'), [])
   const startTicTacToe = useCallback(() => setPhase('tic_tac_toe'), [])
   const unlockFuture = useCallback(() => setPhase('future_unlocked'), [])
+  const unlockAll = useCallback(() => setPhase('future_unlocked'), [])
 
   const isScrollLocked = phase !== 'sentiments_unlocked' && phase !== 'story_unlocked' && phase !== 'future_unlocked'
 
   return (
     <UnlockContext.Provider
-      value={{ phase, startVideo, finishVideo, winGame, finishVideos, startMemoryGame, completeMemoryGame, startTicTacToe, unlockFuture, isScrollLocked }}
+      value={{ phase, startVideo, finishVideo, winGame, finishVideos, startMemoryGame, completeMemoryGame, startTicTacToe, unlockFuture, unlockAll, isScrollLocked }}
     >
       {children}
     </UnlockContext.Provider>

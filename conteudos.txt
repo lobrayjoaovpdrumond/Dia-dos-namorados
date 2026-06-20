@@ -1,0 +1,5 @@
+Lista Ordenada <ol> = E quando a ordem importa ex= 1, 2, 3....
+
+Lista não Ordernada <ul> = E quando a ordem não importa.
+
+Para agrupar a logo e o menu do site, a melhor pratica é utilizar  a tag semântica <header> combinada com a tag <nav> para o menu.

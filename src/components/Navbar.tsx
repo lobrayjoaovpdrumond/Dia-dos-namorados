@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { UnlockPhase } from '../context/UnlockContext'
+import { useUnlock } from '../context/UnlockContext'
 import { lockedNavItems, publicNavItems } from '../data/content'
 import styles from './Navbar.module.css'
 
@@ -11,6 +12,7 @@ interface NavbarProps {
 
 export default function Navbar({ activeId, phase, onNavClick }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { unlockAll } = useUnlock()
   const isUnlocked = phase === 'sentiments_unlocked' || phase === 'story_unlocked' || phase === 'future_unlocked'
   const showStoryUnlocked = phase === 'story_unlocked' || phase === 'future_unlocked'
   const showFutureUnlocked = phase === 'future_unlocked'
@@ -40,6 +42,14 @@ export default function Navbar({ activeId, phase, onNavClick }: NavbarProps) {
           <span className={styles.logoIcon} aria-hidden="true">♥</span>
           <span className={styles.logoText}>Nosso Jardim</span>
         </a>
+
+        <button
+          className={styles.unlockAllBtn}
+          onClick={unlockAll}
+          title="Liberar tudo sem fazer os jogos"
+        >
+          Liberar Tudo
+        </button>
 
         <button
           className={`${styles.menuBtn} ${menuOpen ? styles.menuBtnOpen : ''}`}
