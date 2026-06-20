@@ -61,7 +61,13 @@ export default function FutureChapterModal({ chapter, onClose }: FutureChapterMo
         <div className={styles.content}>
           <div className={styles.number}>Capítulo {chapter.id}</div>
           <h2 className={styles.title}>{chapter.title}</h2>
-          <p className={styles.text}>{chapter.content}</p>
+          <div className={styles.text}>
+            {chapter.content.split('\n\n').map((paragraph, idx) => (
+              <p key={idx} style={{ marginBottom: '1rem' }}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </div>
