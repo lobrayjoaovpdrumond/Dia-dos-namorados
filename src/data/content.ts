@@ -28,8 +28,10 @@ export interface FutureChapter {
   year: number
   title: string
   teaser: string
-  content: string
-  imageSrc: string
+  pages: {
+    content: string
+    imageSrc: string
+  }[]
 }
 
 export const introVideoSrc = '/videos/intro.mp4'
@@ -179,8 +181,16 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'O Primeiro Passo',
     teaser: 'A jornada começa aqui...',
-    content: 'Esse é o começo do que eu quero ter e construir junto com você: uma relação baseada na sinceridade, na honestidade e no respeito aos sentimentos um do outro. Não quero uma relação construída sobre dúvidas, jogos ou brincadeiras com aquilo que sentimos. A única coisa que quero cultivar entre nós é um amor sincero.\n\nNão tenho vergonha de admitir que, anos atrás, posso ter gerado dúvidas por me deixar levar pelas emoções em situações que poderiam ter sido resolvidas com calma, diálogo e uma conversa verdadeira sobre o que cada um sentia. Hoje entendo que esconder sentimentos ou deixar coisas sem resposta apenas afasta as pessoas. A confiança cresce quando existe sinceridade, transparência e coragem para falar a verdade.\n\nTambém reconheço que algumas das minhas ações no passado podem ter causado inseguranças. Mas existe uma coisa da qual tenho certeza: eu nunca deixei de pensar em você e no Bernardo. Sempre me importei com vocês, sempre me preocupei com o bem-estar de vocês e sempre vou amar vocês.\n\nComo este é apenas o primeiro card deste site, e ainda existem muitas coisas que serão reveladas ao longo dele, quero começar abrindo meu coração. Durante muito tempo guardei surpresas que pensei com carinho para você, mas que nunca consegui entregar.\n\nUma delas foi a aliança que comprei no ano passado. Nela, gravei datas especiais que marcaram nossa história. Para mim, ela tem um significado muito maior do que um simples objeto. É como uma tatuagem: uma lembrança permanente, uma história marcada para sempre. Faz parte de quem eu sou, da minha trajetória e de tudo o que vivi ao seu lado.',
-    imageSrc: '/images/chapter-1.png',
+    pages: [
+      {
+        content: 'Esse é o começo do que eu quero ter e construir junto com você: uma relação baseada na sinceridade, na honestidade e no respeito aos sentimentos um do outro. Não quero uma relação construída sobre dúvidas, jogos ou brincadeiras com aquilo que sentimos. A única coisa que quero cultivar entre nós é um amor sincero.\n\nNão tenho vergonha de admitir que, anos atrás, posso ter gerado dúvidas por me deixar levar pelas emoções em situações que poderiam ter sido resolvidas com calma, diálogo e uma conversa verdadeira sobre o que cada um sentia. Hoje entendo que esconder sentimentos ou deixar coisas sem resposta apenas afasta as pessoas. A confiança cresce quando existe sinceridade, transparência e coragem para falar a verdade.\n\nTambém reconheço que algumas das minhas ações no passado podem ter causado inseguranças. Mas existe uma coisa da qual tenho certeza: eu nunca deixei de pensar em você e no Bernardo. Sempre me importei com vocês, sempre me preocupei com o bem-estar de vocês e sempre vou amar vocês.\n\nComo este é apenas o primeiro card deste site, e ainda existem muitas coisas que serão reveladas ao longo dele, quero começar abrindo meu coração. Durante muito tempo guardei surpresas que pensei com carinho para você, mas que nunca consegui entregar.\n\nUma delas foi a aliança que comprei no ano passado. Nela, gravei datas especiais que marcaram nossa história. Para mim, ela tem um significado muito maior do que um simples objeto. É como uma tatuagem: uma lembrança permanente, uma história marcada para sempre. Faz parte de quem eu sou, da minha trajetória e de tudo o que vivi ao seu lado.',
+        imageSrc: '/images/chapter-1.png',
+      },
+      {
+        content: 'Conteúdo da segunda página aqui...',
+        imageSrc: '/images/chapter-1-page-2.png',
+      },
+    ],
   },
   {
     id: '2',
@@ -188,8 +198,12 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'Segundo Capítulo',
     teaser: 'Mais um mês, mais perto de você...',
-    content: 'Já se passou um mês desde que começamos esta jornada. A cada dia que passa, meu coração fica mais ansioso para o dia em que acordarei ao seu lado todos os dias.',
-    imageSrc: '/images/future/chapter-2.png',
+    pages: [
+      {
+        content: 'Já se passou um mês desde que começamos esta jornada. A cada dia que passa, meu coração fica mais ansioso para o dia em que acordarei ao seu lado todos os dias.',
+        imageSrc: '/images/future/chapter-2.png',
+      },
+    ],
   },
   {
     id: '3',
@@ -197,8 +211,12 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'Terceiro Capítulo',
     teaser: 'A metade do caminho...',
-    content: 'Estamos chegando cada vez mais perto. Cada momento compartilhado, mesmo à distância, fortalece ainda mais nossa certeza de que vale a pena esperar.',
-    imageSrc: '/images/future/chapter-3.png',
+    pages: [
+      {
+        content: 'Estamos chegando cada vez mais perto. Cada momento compartilhado, mesmo à distância, fortalece ainda mais nossa certeza de que vale a pena esperar.',
+        imageSrc: '/images/future/chapter-3.png',
+      },
+    ],
   },
   {
     id: '4',
@@ -206,8 +224,12 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'Quarto Capítulo',
     teaser: 'Preparando o futuro...',
-    content: 'Já consigo imaginar nossa rotina juntos. Os pequenos momentos do dia a dia que vão compor a nossa história.',
-    imageSrc: '/images/future/chapter-4.png',
+    pages: [
+      {
+        content: 'Já consigo imaginar nossa rotina juntos. Os pequenos momentos do dia a dia que vão compor a nossa história.',
+        imageSrc: '/images/future/chapter-4.png',
+      },
+    ],
   },
   {
     id: '5',
@@ -215,8 +237,12 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'Quinto Capítulo',
     teaser: 'Cada vez mais próximos...',
-    content: 'A espera está ficando mais difícil, mas também mais doce. Porque sei que em breve não precisaremos mais esperar.',
-    imageSrc: '/images/future/chapter-5.png',
+    pages: [
+      {
+        content: 'A espera está ficando mais difícil, mas também mais doce. Porque sei que em breve não precisaremos mais esperar.',
+        imageSrc: '/images/future/chapter-5.png',
+      },
+    ],
   },
   {
     id: '6',
@@ -224,8 +250,12 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'Sexto Capítulo',
     teaser: 'Falta pouco agora...',
-    content: 'Os planos estão tomando forma. A realidade está cada vez mais perto do sonho que compartilhamos.',
-    imageSrc: '/images/future/chapter-6.png',
+    pages: [
+      {
+        content: 'Os planos estão tomando forma. A realidade está cada vez mais perto do sonho que compartilhamos.',
+        imageSrc: '/images/future/chapter-6.png',
+      },
+    ],
   },
   {
     id: '7',
@@ -233,8 +263,12 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'Sétimo Capítulo',
     teaser: 'Preparativos finais...',
-    content: 'Estamos nos últimos meses. Logo toda a espera valerá a pena e nossa nova vida juntos começará.',
-    imageSrc: '/images/future/chapter-7.png',
+    pages: [
+      {
+        content: 'Estamos nos últimos meses. Logo toda a espera valerá a pena e nossa nova vida juntos começará.',
+        imageSrc: '/images/future/chapter-7.png',
+      },
+    ],
   },
   {
     id: '8',
@@ -242,8 +276,12 @@ export const futureChapters: FutureChapter[] = [
     year: 2027,
     title: 'Penúltimo Capítulo',
     teaser: 'Quase lá...',
-    content: 'Falta apenas mais um passo. Um mês. E então nossa história ganha um novo começo.',
-    imageSrc: '/images/future/chapter-8.png',
+    pages: [
+      {
+        content: 'Falta apenas mais um passo. Um mês. E então nossa história ganha um novo começo.',
+        imageSrc: '/images/future/chapter-8.png',
+      },
+    ],
   },
   {
     id: '9',
@@ -251,7 +289,11 @@ export const futureChapters: FutureChapter[] = [
     year: 2027,
     title: 'Finalmente Juntos',
     teaser: 'O dia chegou! 💕',
-    content: 'A espera acabou. Hoje começamos a viver o nosso para sempre juntos. Este não é um fim, é o começo mais lindo de todos. Te amo!',
-    imageSrc: '/images/future/chapter-9.png',
+    pages: [
+      {
+        content: 'A espera acabou. Hoje começamos a viver o nosso para sempre juntos. Este não é um fim, é o começo mais lindo de todos. Te amo!',
+        imageSrc: '/images/future/chapter-9.png',
+      },
+    ],
   },
 ]
