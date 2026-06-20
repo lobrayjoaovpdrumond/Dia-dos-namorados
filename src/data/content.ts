@@ -28,8 +28,10 @@ export interface FutureChapter {
   year: number
   title: string
   teaser: string
-  content: string
-  imageSrc: string
+  pages: {
+    content: string
+    imageSrc: string
+  }[]
 }
 
 export const introVideoSrc = '/videos/intro.mp4'
@@ -179,88 +181,119 @@ export const futureChapters: FutureChapter[] = [
     year: 2026,
     title: 'O Primeiro Passo',
     teaser: 'A jornada começa aqui...',
-    content: 'Esse é o começo do que eu quero ter e construir junto com você: uma relação baseada na sinceridade, na honestidade e no respeito aos sentimentos um do outro. Não quero uma relação construída sobre dúvidas, jogos ou brincadeiras com aquilo que sentimos. A única coisa que quero cultivar entre nós é um amor sincero.\n\nNão tenho vergonha de admitir que, anos atrás, posso ter gerado dúvidas por me deixar levar pelas emoções em situações que poderiam ter sido resolvidas com calma, diálogo e uma conversa verdadeira sobre o que cada um sentia. Hoje entendo que esconder sentimentos ou deixar coisas sem resposta apenas afasta as pessoas. A confiança cresce quando existe sinceridade, transparência e coragem para falar a verdade.\n\nTambém reconheço que algumas das minhas ações no passado podem ter causado inseguranças. Mas existe uma coisa da qual tenho certeza: eu nunca deixei de pensar em você e no Bernardo. Sempre me importei com vocês, sempre me preocupei com o bem-estar de vocês e sempre vou amar vocês.\n\nComo este é apenas o primeiro card deste site, e ainda existem muitas coisas que serão reveladas ao longo dele, quero começar abrindo meu coração. Durante muito tempo guardei surpresas que pensei com carinho para você, mas que nunca consegui entregar.\n\nUma delas foi a aliança que comprei no ano passado. Nela, gravei datas especiais que marcaram nossa história. Para mim, ela tem um significado muito maior do que um simples objeto. É como uma tatuagem: uma lembrança permanente, uma história marcada para sempre. Faz parte de quem eu sou, da minha trajetória e de tudo o que vivi ao seu lado.',
-    imageSrc: '/images/chapter-1.png',
+    pages: [
+      {
+        content: 'Esse é o começo do que eu quero ter e construir junto com você: uma relação baseada na sinceridade, na honestidade e no respeito aos sentimentos um do outro. Não quero uma relação construída sobre dúvidas, jogos ou brincadeiras com aquilo que sentimos. A única coisa que quero cultivar entre nós é um amor sincero.\n\nNão tenho vergonha de admitir que, anos atrás, posso ter gerado dúvidas por me deixar levar pelas emoções em situações que poderiam ter sido resolvidas com calma, diálogo e uma conversa verdadeira sobre o que cada um sentia. Hoje entendo que esconder sentimentos ou deixar coisas sem resposta apenas afasta as pessoas. A confiança cresce quando existe sinceridade, transparência e coragem para falar a verdade.\n\nTambém reconheço que algumas das minhas ações no passado podem ter causado inseguranças. Mas existe uma coisa da qual tenho certeza: eu nunca deixei de pensar em você e no Bernardo. Sempre me importei com vocês, sempre me preocupei com o bem-estar de vocês e sempre vou amar vocês.\n\nComo este é apenas o primeiro card deste site, e ainda existem muitas coisas que serão reveladas ao longo dele, quero começar abrindo meu coração. Durante muito tempo guardei surpresas que pensei com carinho para você, mas que nunca consegui entregar.\n\nUma delas foi a aliança que comprei no ano passado. Nela, gravei datas especiais que marcaram nossa história. Para mim, ela tem um significado muito maior do que um simples objeto. É como uma tatuagem: uma lembrança permanente, uma história marcada para sempre. Faz parte de quem eu sou, da minha trajetória e de tudo o que vivi ao seu lado.',
+        imageSrc: '/images/chapter-1.png',
+      },
+      {
+        content: 'A primeira aliança é a sua.\n\nNela está gravada a data 17/10/2022, o dia em que tudo mudou na minha vida. Foi o dia em que eu conheci você, e posso dizer com toda sinceridade que foi uma das coisas mais bonitas que já me aconteceram.\n\nVocê era uma mulher linda, fofa, e eu adorava conversar com você. Sua presença me fazia bem de uma forma que eu não sabia explicar.\n\nMas essa data também carrega uma das maiores dores da minha vida.\n\nFoi o período em que fiz a cirurgia no pescoço. Eu carregava um medo enorme de morrer, o medo de ter câncer.\n\nLembro do médico olhando para minha mãe e falando que era uma cirurgia complexa, mas que, entre todas, aquela era uma das mais fáceis para ele. Porém, dava para sentir que tinha algo que ele não estava falando.\n\nMinha mãe percebeu e começou a pressionar para entender a verdade. Foi quando ele explicou:\n\n"Olha, a glândula dele está doente. Em algum momento ela pode começar a produzir muitas pedras. Pode ser agora, pode ser amanhã, ou pode ser que nunca mais aconteça. Mas, se acontecer, ela pode inflamar, o caso pode ficar sério, podemos precisar intubar ele, e existe uma chance alta dele morrer."\n\nOuvir aquilo trouxe um medo que eu nunca tinha sentido antes.\n\nNunca vou esquecer daquele dia em que eu e outro rapaz fizemos a cirurgia. O resultado dele veio maligno, e o meu não.\n\nLembro até hoje de sair do hospital chorando sem parar. Chorei durante toda a viagem de volta para casa. Não era apenas tristeza. Era como se todo o medo, toda a angústia e toda a dor que eu estava guardando estivessem saindo de uma vez.\n\nEu tinha medo de morrer. Tinha medo do futuro. Tinha medo de estar pagando por algo. Tinha medo até do inferno.\n\nDepois dos exames e da retirada da glândula, veio o resultado da biópsia. Eu não lembro o nome exatamente, porque era um nome grande e diferente, mas descobri que eu tinha uma condição crônica: meu corpo produz pedras.\n\nDescobri que era algo que eu carregava comigo desde que nasci e que não tinha cura.\n\nQuando descobri isso, comecei a viver com medo. Eu pensava que a qualquer momento a outra glândula poderia adoecer também, começar a produzir pedras e minha vida poderia mudar completamente.\n\nLembro do médico falando que, se um dia precisasse retirar a outra, seria algo muito mais complicado.\n\nFoi um peso enorme carregar esse pensamento de estar aqui hoje, mas ao mesmo tempo sentir que talvez amanhã tudo pudesse mudar.\n\nEra como pensar: "Eu estou aqui, mas talvez um dia eu não esteja."\n\nMas, mesmo diante disso, existia algo dentro de mim dizendo que eu não podia desistir. Eu precisava ser forte. Eu precisava enfrentar aquilo.\n\nE foi assim que enfrentei aquele período: com medo, mas também com fé.\n\nForam meses extremamente difíceis. Meses em que a dor me acompanhava todos os dias. Eu chorava para tomar banho, chorava para levantar da cama, chorava até para fazer coisas simples.\n\nTomar um copo de água parecia uma facada no pescoço. Comer doía. Falar doía. Viver doía.\n\nFoi nesse período que eu aprendi o verdadeiro valor da vida.\n\nPassei a agradecer por coisas simples. Agradecer por conseguir beber água. Agradecer por conseguir me alimentar. Agradecer por conseguir fazer coisas que antes eu considerava normais.\n\nTambém aprendi que precisava controlar minhas emoções e não deixar que os problemas ou as atitudes das outras pessoas me consumissem, porque quem sofria as consequências era eu.\n\nEssa descoberta mudou minha forma de enxergar a vida. Me fez querer ser alguém melhor, valorizar mais quem estava comigo e aprender a ser sincero com aquilo que eu sentia.\n\nFoi um processo difícil. Nesse caminho eu sei que criei inseguranças em você, gerei dúvidas e tive momentos em que minhas emoções falaram mais alto.\n\nMas também foi nesse processo que eu fui mudando, aprendendo e me tornando uma pessoa melhor.\n\nE, em meio a tanta dor, apareceu uma luz no fim do túnel.\n\nEssa luz foi você.\n\nVocê trouxe paz para um coração que estava cansado. Trouxe calma para uma mente que estava cheia de medo. Você me ajudou a atravessar um dos períodos mais difíceis da minha vida.\n\nVocê conseguiu conhecer um João que sofria calado, que escondia suas dores e seus medos. E mesmo assim me fez sentir acolhido.\n\nNa sua presença eu encontrei confiança.\n\nNa sua presença eu encontrei paz.\n\nE, por muito tempo, você foi o meu porto seguro.\n\nE hoje eu te entrego essa aliança porque ela representa muito mais do que um objeto.\n\nEla é um pedaço de mim.\n\nEla carrega uma história que ficou marcada dentro de mim. Carrega uma fase de dor, medo, fé, aprendizado e transformação.\n\nEla é como uma tatuagem da minha história, algo que faz parte de quem eu sou.\n\nE eu quero compartilhar essa parte de mim com você.\n\nQuero que você saiba que eu te amo muito.\n\nE entre todos os anos de vida que eu ainda tiver, eu quero construir minha história ao seu lado.',
+        imageSrc: '/images/chapter-2.png',
+      },
+    ],
   },
   {
     id: '2',
-    month: 6,
-    year: 2026,
-    title: 'A Primeira Aliança',
-    teaser: '17/10/2022 - O dia que mudou tudo',
-    content: 'A primeira aliança é a sua.\n\nNela está gravada a data 17/10/2022, o dia em que tudo mudou na minha vida. Foi o dia em que eu conheci você, e posso dizer com toda sinceridade que foi uma das coisas mais bonitas que já me aconteceram.\n\nVocê era uma mulher linda, fofa, e eu adorava conversar com você. Sua presença me fazia bem de uma forma que eu não sabia explicar.\n\nMas essa data também carrega uma das maiores dores da minha vida.\n\nFoi o período em que fiz a cirurgia no pescoço. Eu carregava um medo enorme de morrer, o medo de ter câncer.\n\nLembro do médico olhando para minha mãe e falando que era uma cirurgia complexa, mas que, entre todas, aquela era uma das mais fáceis para ele. Porém, dava para sentir que tinha algo que ele não estava falando.\n\nMinha mãe percebeu e começou a pressionar para entender a verdade. Foi quando ele explicou:\n\n"Olha, a glândula dele está doente. Em algum momento ela pode começar a produzir muitas pedras. Pode ser agora, pode ser amanhã, ou pode ser que nunca mais aconteça. Mas, se acontecer, ela pode inflamar, o caso pode ficar sério, podemos precisar intubar ele, e existe uma chance alta dele morrer."\n\nOuvir aquilo trouxe um medo que eu nunca tinha sentido antes.\n\nNunca vou esquecer daquele dia em que eu e outro rapaz fizemos a cirurgia. O resultado dele veio maligno, e o meu não.\n\nLembro até hoje de sair do hospital chorando sem parar. Chorei durante toda a viagem de volta para casa. Não era apenas tristeza. Era como se todo o medo, toda a angústia e toda a dor que eu estava guardando estivessem saindo de uma vez.\n\nEu tinha medo de morrer. Tinha medo do futuro. Tinha medo de estar pagando por algo. Tinha medo até do inferno.\n\nDepois dos exames e da retirada da glândula, veio o resultado da biópsia. Eu não lembro o nome exatamente, porque era um nome grande e diferente, mas descobri que eu tinha uma condição crônica: meu corpo produz pedras.\n\nDescobri que era algo que eu carregava comigo desde que nasci e que não tinha cura.\n\nQuando descobri isso, comecei a viver com medo. Eu pensava que a qualquer momento a outra glândula poderia adoecer também, começar a produzir pedras e minha vida poderia mudar completamente.\n\nLembro do médico falando que, se um dia precisasse retirar a outra, seria algo muito mais complicado.\n\nFoi um peso enorme carregar esse pensamento de estar aqui hoje, mas ao mesmo tempo sentir que talvez amanhã tudo pudesse mudar.\n\nEra como pensar: "Eu estou aqui, mas talvez um dia eu não esteja."\n\nMas, mesmo diante disso, existia algo dentro de mim dizendo que eu não podia desistir. Eu precisava ser forte. Eu precisava enfrentar aquilo.\n\nE foi assim que enfrentei aquele período: com medo, mas também com fé.\n\nForam meses extremamente difíceis. Meses em que a dor me acompanhava todos os dias. Eu chorava para tomar banho, chorava para levantar da cama, chorava até para fazer coisas simples.\n\nTomar um copo de água parecia uma facada no pescoço. Comer doía. Falar doía. Viver doía.\n\nFoi nesse período que eu aprendi o verdadeiro valor da vida.\n\nPassei a agradecer por coisas simples. Agradecer por conseguir beber água. Agradecer por conseguir me alimentar. Agradecer por conseguir fazer coisas que antes eu considerava normais.\n\nTambém aprendi que precisava controlar minhas emoções e não deixar que os problemas ou as atitudes das outras pessoas me consumissem, porque quem sofria as consequências era eu.\n\nEssa descoberta mudou minha forma de enxergar a vida. Me fez querer ser alguém melhor, valorizar mais quem estava comigo e aprender a ser sincero com aquilo que eu sentia.\n\nFoi um processo difícil. Nesse caminho eu sei que criei inseguranças em você, gerei dúvidas e tive momentos em que minhas emoções falaram mais alto.\n\nMas também foi nesse processo que eu fui mudando, aprendendo e me tornando uma pessoa melhor.\n\nE, em meio a tanta dor, apareceu uma luz no fim do túnel.\n\nEssa luz foi você.\n\nVocê trouxe paz para um coração que estava cansado. Trouxe calma para uma mente que estava cheia de medo. Você me ajudou a atravessar um dos períodos mais difíceis da minha vida.\n\nVocê conseguiu conhecer um João que sofria calado, que escondia suas dores e seus medos. E mesmo assim me fez sentir acolhido.\n\nNa sua presença eu encontrei confiança.\n\nNa sua presença eu encontrei paz.\n\nE, por muito tempo, você foi o meu porto seguro.\n\nE hoje eu te entrego essa aliança porque ela representa muito mais do que um objeto.\n\nEla é um pedaço de mim.\n\nEla carrega uma história que ficou marcada dentro de mim. Carrega uma fase de dor, medo, fé, aprendizado e transformação.\n\nEla é como uma tatuagem da minha história, algo que faz parte de quem eu sou.\n\nE eu quero compartilhar essa parte de mim com você.\n\nQuero que você saiba que eu te amo muito.\n\nE entre todos os anos de vida que eu ainda tiver, eu quero construir minha história ao seu lado.',
-    imageSrc: '/images/chapter-2.png',
-  },
-  {
-    id: '3',
     month: 7,
     year: 2026,
     title: 'Segundo Capítulo',
     teaser: 'Mais um mês, mais perto de você...',
-    content: 'Já se passou um mês desde que começamos esta jornada. A cada dia que passa, meu coração fica mais ansioso para o dia em que acordarei ao seu lado todos os dias.',
-    imageSrc: '/images/future/chapter-2.png',
+    pages: [
+      {
+        content: 'Já se passou um mês desde que começamos esta jornada. A cada dia que passa, meu coração fica mais ansioso para o dia em que acordarei ao seu lado todos os dias.',
+        imageSrc: '/images/future/chapter-2.png',
+      },
+    ],
   },
   {
-    id: '4',
+    id: '3',
     month: 8,
     year: 2026,
     title: 'Terceiro Capítulo',
     teaser: 'A metade do caminho...',
-    content: 'Estamos chegando cada vez mais perto. Cada momento compartilhado, mesmo à distância, fortalece ainda mais nossa certeza de que vale a pena esperar.',
-    imageSrc: '/images/future/chapter-3.png',
+    pages: [
+      {
+        content: 'Estamos chegando cada vez mais perto. Cada momento compartilhado, mesmo à distância, fortalece ainda mais nossa certeza de que vale a pena esperar.',
+        imageSrc: '/images/future/chapter-3.png',
+      },
+    ],
   },
   {
-    id: '5',
+    id: '4',
     month: 9,
     year: 2026,
     title: 'Quarto Capítulo',
     teaser: 'Preparando o futuro...',
-    content: 'Já consigo imaginar nossa rotina juntos. Os pequenos momentos do dia a dia que vão compor a nossa história.',
-    imageSrc: '/images/future/chapter-4.png',
+    pages: [
+      {
+        content: 'Já consigo imaginar nossa rotina juntos. Os pequenos momentos do dia a dia que vão compor a nossa história.',
+        imageSrc: '/images/future/chapter-4.png',
+      },
+    ],
   },
   {
-    id: '6',
+    id: '5',
     month: 10,
     year: 2026,
     title: 'Quinto Capítulo',
     teaser: 'Cada vez mais próximos...',
-    content: 'A espera está ficando mais difícil, mas também mais doce. Porque sei que em breve não precisaremos mais esperar.',
-    imageSrc: '/images/future/chapter-5.png',
+    pages: [
+      {
+        content: 'A espera está ficando mais difícil, mas também mais doce. Porque sei que em breve não precisaremos mais esperar.',
+        imageSrc: '/images/future/chapter-5.png',
+      },
+    ],
   },
   {
-    id: '7',
+    id: '6',
     month: 11,
     year: 2026,
     title: 'Sexto Capítulo',
     teaser: 'Falta pouco agora...',
-    content: 'Os planos estão tomando forma. A realidade está cada vez mais perto do sonho que compartilhamos.',
-    imageSrc: '/images/future/chapter-6.png',
+    pages: [
+      {
+        content: 'Os planos estão tomando forma. A realidade está cada vez mais perto do sonho que compartilhamos.',
+        imageSrc: '/images/future/chapter-6.png',
+      },
+    ],
   },
   {
-    id: '8',
+    id: '7',
     month: 12,
     year: 2026,
     title: 'Sétimo Capítulo',
     teaser: 'Preparativos finais...',
-    content: 'Estamos nos últimos meses. Logo toda a espera valerá a pena e nossa nova vida juntos começará.',
-    imageSrc: '/images/future/chapter-7.png',
+    pages: [
+      {
+        content: 'Estamos nos últimos meses. Logo toda a espera valerá a pena e nossa nova vida juntos começará.',
+        imageSrc: '/images/future/chapter-7.png',
+      },
+    ],
   },
   {
-    id: '9',
+    id: '8',
     month: 1,
     year: 2027,
     title: 'Penúltimo Capítulo',
     teaser: 'Quase lá...',
-    content: 'Falta apenas mais um passo. Um mês. E então nossa história ganha um novo começo.',
-    imageSrc: '/images/future/chapter-8.png',
+    pages: [
+      {
+        content: 'Falta apenas mais um passo. Um mês. E então nossa história ganha um novo começo.',
+        imageSrc: '/images/future/chapter-8.png',
+      },
+    ],
   },
   {
-    id: '10',
+    id: '9',
     month: 2,
     year: 2027,
     title: 'Finalmente Juntos',
     teaser: 'O dia chegou! 💕',
-    content: 'A espera acabou. Hoje começamos a viver o nosso para sempre juntos. Este não é um fim, é o começo mais lindo de todos. Te amo!',
-    imageSrc: '/images/future/chapter-9.png',
+    pages: [
+      {
+        content: 'A espera acabou. Hoje começamos a viver o nosso para sempre juntos. Este não é um fim, é o começo mais lindo de todos. Te amo!',
+        imageSrc: '/images/future/chapter-9.png',
+      },
+    ],
   },
 ]
