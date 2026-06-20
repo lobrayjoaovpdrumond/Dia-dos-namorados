@@ -96,6 +96,7 @@ export default function FutureChapterModal({ chapter, onClose }: FutureChapterMo
                   ← Anterior
                 </button>
               )}
+              {!hasPrevPage && hasNextPage && <div />}
               {hasNextPage && (
                 <button className={styles.navBtn} onClick={goToNextPage}>
                   Próximo →

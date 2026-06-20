@@ -187,7 +187,7 @@ export const futureChapters: FutureChapter[] = [
         imageSrc: '/images/chapter-1.png',
       },
       {
-        content: 'Conteúdo da segunda página aqui...',
+        content: 'Conteúdo da segunda página do capítulo 1.\n\nEste é um exemplo de texto que aparecerá na segunda página quando você clicar em Próximo.\n\nVocê pode adicionar mais parágrafos aqui conforme necessário.',
         imageSrc: '/images/chapter-1-page-2.png',
       },
     ],
