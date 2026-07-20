@@ -29,6 +29,7 @@ export interface FutureChapter {
   title: string
   teaser: string
   pages: {
+    title?: string
     content: string
     imageSrc: string
   }[]
@@ -200,12 +201,37 @@ export const futureChapters: FutureChapter[] = [
     id: '2',
     month: 7,
     year: 2026,
-    title: 'A Primeira Aliança',
-    teaser: '17/10/2022 - O dia que mudou tudo',
+    title: 'Por Que Eu Continuo Escolhendo Vocês',
+    teaser: 'A escolha que continua todos os dias',
     pages: [
       {
-        content: 'Em breve...',
-        imageSrc: '/images/future/chapter-2.png',
+        title: 'O amor deixou de ser apenas um sentimento',
+        content: 'O carinho que eu sentia por você no começo não é o mesmo que sinto hoje.\n\nNo início, eu te amava e queria viver muitas coisas ao seu lado. Queria conversar com você, passar horas juntos e criar lembranças.\n\nMas, com o passar do tempo, eu percebi que o que eu sentia era muito maior do que apenas gostar de alguém.\n\nComeçou a nascer dentro de mim um desejo enorme de cuidar de você.\n\nDe proteger você.\n\nDe ver você bem.\n\nE, junto com isso, nasceu também um carinho imenso pelo Bernardo. Eu passei a enxergar vocês dois como parte do futuro que eu sonhava construir.\n\nFoi então que entendi que amar não é apenas sentir aquele frio na barriga ou ficar feliz quando a pessoa manda uma mensagem.\n\nAmar também é uma escolha.\n\nExistiram dias em que tudo parecia fácil.\n\nTambém existiram dias em que a distância parecia maior do que nunca.\n\nDias em que a saudade apertava.\n\nDias em que as dúvidas apareciam.\n\nMas, mesmo assim, quando eu fechava os olhos e imaginava meu futuro, você continuava lá.\n\nFoi nesse momento que eu percebi que meu amor por você tinha amadurecido.\n\nEle deixou de ser apenas um sentimento.\n\nE se tornou uma decisão que eu fazia todos os dias: continuar escolhendo você.',
+        imageSrc: '/img/m1.png',
+      },
+      {
+        title: 'Porque você conheceu quem eu realmente era',
+        content: 'Você me conheceu em uma fase da minha vida em que eu carregava muitos medos e inseguranças.\n\nVocê acabou conhecendo um João cheio de dúvidas, que ainda estava aprendendo a lidar com as próprias emoções.\n\nVocê me viu errar.\n\nMe viu mudar.\n\nMe viu aprender.\n\nE, mesmo passando por tudo isso, nunca senti que precisava fingir ser outra pessoa quando estava com você.\n\nPorque, ao seu lado, eu me sentia confortável.\n\nEu podia relaxar.\n\nPodia abaixar a guarda.\n\nPodia simplesmente ser eu.\n\nSem precisar esconder minhas fraquezas.\n\nSem precisar parecer mais forte do que realmente era.\n\nE isso é algo muito raro.\n\nHoje eu percebo que encontrar alguém diante de quem podemos mostrar nossas qualidades, nossos defeitos, nossos medos e, ainda assim, nos sentirmos acolhidos, é um dos maiores presentes que a vida pode oferecer.\n\nFoi isso que encontrei em você.',
+        imageSrc: '/img/2m.png',
+      },
+      {
+        title: 'Porque eu vi qualidades que talvez nem você veja',
+        content: 'Não foi apenas pela sua beleza ou pelo sorriso lindo que você tem que eu me apaixonei.\n\nFoi pelo jeito que você ama.\n\nPelo jeito que você tentava cuidar de mim quando estávamos juntos.\n\nPelo carinho que você fazia no meu cabelo.\n\nPela forma tímida que você encontrava para demonstrar amor, sempre tentando me agradar do seu jeitinho.\n\nPelo seu olhar.\n\nPelo seu rostinho.\n\nPor todas aquelas pequenas atitudes que, talvez para você fossem simples, mas que para mim significavam muito.\n\nTambém me apaixonei pela mãe que você é.\n\nEu admiro o quanto você luta para dar uma vida melhor ao Bernardo.\n\nAdmiro a força que você encontra para continuar mesmo quando a vida parece injusta.\n\nVejo o amor que você sente por ele em cada cuidado, em cada preocupação e em cada decisão que toma pensando no bem dele.\n\nEssas são coisas que talvez você nem perceba em si mesma.\n\nMas eu percebo.\n\nE foram justamente esses pequenos detalhes que fizeram minha admiração por você crescer cada vez mais.\n\nFoi aí que eu entendi que eu não amava apenas a mulher bonita que conheci.\n\nEu amava a mulher forte, carinhosa, dedicada e cheia de amor que existe dentro de você.\n\nE é essa mulher que eu continuo escolhendo todos os dias.',
+        imageSrc: '/img/3m.png',
+      },
+      {
+        title: 'Porque o tempo nunca diminuiu o que eu sentia',
+        content: 'Muitas pessoas dizem que a distância esfria o amor.\n\nMas, com você e com o Bernardo, aconteceu exatamente o contrário.\n\nA distância me fez perceber o tamanho da falta que vocês dois fazem na minha vida.\n\nEla me fez entender que amar alguém não depende apenas da presença.\n\nDepende da importância que essa pessoa tem dentro da gente.\n\nE vocês dois se tornaram uma das partes mais importantes da minha vida.\n\nTodos os dias, quando vou dormir, abraço o travesseiro imaginando que estou abraçando minha esposa e meu filhinho.\n\nÀs vezes até fecho os olhos e imagino dando um beijo em vocês antes de dormir.\n\nPode parecer uma coisa simples, mas é nesses pequenos momentos que eu percebo o quanto sinto falta de vocês.\n\nEu não vejo a hora de isso deixar de ser apenas imaginação.\n\nPorque não é apenas um sonho.\n\nNão é apenas um desejo.\n\nÉ a vida que eu quero construir ao lado de vocês.\n\nUma vida com abraços de verdade.\n\nCom beijos de boa noite.\n\nCom risadas dentro de casa.\n\nCom o Bernardo correndo pela sala enquanto nós dois damos risada.\n\nÉ essa vida simples que eu imagino todos os dias.\n\nE espero, do fundo do meu coração, que um dia ela deixe de existir apenas na minha imaginação e se torne a nossa realidade.',
+        imageSrc: '/img/4m.png',
+      },
+      {
+        title: 'Porque eu nunca deixei de imaginar nós dois',
+        content: 'Sempre que eu imaginava como seria minha vida no futuro, você, Amanda, e o Bernardo estavam presentes nela.\n\nNunca consegui imaginar meu futuro sem vocês.\n\nEu imaginava você chegando em casa cansada do trabalho. Eu iria te abraçar bem forte e dizer:\n\n"Bem-vinda de volta, amor. Estávamos morrendo de saudade de você."\n\nDepois nós dois conversaríamos sobre como foi o dia um do outro, enquanto o Bernardo estaria correndo pela casa, fazendo bagunça e enchendo nosso lar de alegria.\n\nEu imaginava nós três assistindo filmes juntinhos, vivendo momentos simples em família e criando lembranças que ficariam para sempre na cabecinha do nosso precioso Tutu.\n\nTambém imaginava um domingo qualquer.\n\nEu e o Tutu cuidando da carne do churrasco, enquanto você fazia o arroz.\n\nSó que, na verdade, a gente estaria era toda hora beliscando a carne escondido, morrendo de fome... kkkkk.\n\nClaro, sem deixar a mamãe descobrir, senão ela ia chamar nós dois de gulosos.\n\nSão cenas simples.\n\nMas são justamente essas cenas que eu mais sonho em viver.\n\nFoi então que eu percebi uma coisa.\n\nEu nunca sonhei com uma vida perfeita.\n\nÉ claro que eu quero trabalhar, crescer e dar uma vida confortável para nossa família.\n\nMas de que adiantaria conquistar tudo isso se eu não pudesse dividir com as pessoas que mais amo?\n\nPara mim, a maior riqueza nunca foi uma casa grande ou muito dinheiro.\n\nA minha maior riqueza sempre foi imaginar vocês dois ao meu lado.\n\nPorque vocês são os dois maiores presentes que Deus colocou na minha vida.\n\nE é com vocês que eu quero construir todas as lembranças que, por enquanto, só existem na minha imaginação.',
+        imageSrc: '/img/5m.png',
+      },
+      {
+        content: 'Depois de tudo isso, eu entendi que o amor não é medido pelo tempo, pela distância ou pela facilidade da caminhada.\n\nEle é medido pelas escolhas que fazemos todos os dias.\n\nE, mesmo depois de tudo o que vivemos, se alguém me perguntasse:\n\n"Por que você continuou escolhendo ela?"\n\nMinha resposta continuaria sendo a mesma.\n\nPorque, quando eu olho para o futuro, não consigo imaginar uma versão feliz da minha vida sem você e o Bernardo fazendo parte dela.\n\nVocês são o meu lar, mesmo antes de termos uma casa.\n\nE enquanto esse dia não chega, cada mês que passa e cada cadeado que se abre me aproxima um pouco mais da vida que eu sonho construir ao lado de vocês.',
+        imageSrc: '/img/6m.png',
       },
     ],
   },
